@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'testFont';
+    src: url('DeftoneStylus-Regular.woff2') format('woff2'),
+        url('DeftoneStylus-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    color: green;
+}
+
+h2 {
+    font-family: 'testFont';
+    font-size: 60px;
+}
