@@ -1,6 +1,7 @@
 import './style.css';
 import Image from './images/happy-test-screen.jpg';
 import { printMe } from './print.js';
+import { todo } from './todo.js';
 
 console.log('hello world');
 printMe();
@@ -15,6 +16,10 @@ fontTest.textContent = 'testing font';
 
 const Icon = document.createElement('img');
 Icon.src = Image;
+
+let test = todo('test task', '2023-07-24');
+
+console.log(test);
 
 document.body.appendChild(hello);
 document.body.appendChild(serverTest);
