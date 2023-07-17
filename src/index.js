@@ -1,5 +1,5 @@
 import './style.css';
-import Image from './happy-test-screen.jpg';
+import Image from './images/happy-test-screen.jpg';
 import { printMe } from './print.js';
 
 console.log('hello world');

@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'testFont';
-    src: url('DeftoneStylus-Regular.woff2') format('woff2'),
-        url('DeftoneStylus-Regular.woff') format('woff');
+    src: url('./fonts/test-font/DeftoneStylus-Regular.woff2') format('woff2'),
+        url('./fonts/test-font/DeftoneStylus-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
