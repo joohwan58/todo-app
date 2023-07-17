@@ -1,7 +1,8 @@
 import './style.css';
 import Image from './images/happy-test-screen.jpg';
 import { printMe } from './print.js';
-import { todo } from './todo.js';
+import { todoFactory } from './todo.js';
+import { projectFactory } from './project.js'
 
 console.log('hello world');
 printMe();
@@ -17,9 +18,16 @@ fontTest.textContent = 'testing font';
 const Icon = document.createElement('img');
 Icon.src = Image;
 
-let test = todo('test task', '2023-07-24');
-
-console.log(test);
+let test = todoFactory('test task', '2023-07-24');
+let test2 = todoFactory('test task 2', '2023-07-24');
+let testProject = projectFactory('test');
+console.log(testProject);
+testProject.addTodo(test);
+console.log(testProject);
+testProject.addTodo(test2);
+console.log(testProject);
+testProject.removeTodo(test);
+console.log(testProject);
 
 document.body.appendChild(hello);
 document.body.appendChild(serverTest);
