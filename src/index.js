@@ -1,8 +1,10 @@
 import './style.css';
 import Image from './images/happy-test-screen.jpg';
 import { printMe } from './print.js';
+
 import { todoFactory } from './todo.js';
 import { projectFactory } from './project.js'
+import { app } from './app.js';
 
 console.log('hello world');
 printMe();
@@ -28,6 +30,13 @@ testProject.addTodo(test2);
 console.log(testProject);
 testProject.removeTodo(test);
 console.log(testProject);
+
+console.log(app);
+app.addProject(testProject);
+console.log(app);
+app.addProject(projectFactory('testProject'));
+console.log(app);
+
 
 document.body.appendChild(hello);
 document.body.appendChild(serverTest);
