@@ -22,12 +22,9 @@ Icon.src = Image;
 
 let test = todoFactory('test task', '2023-07-24');
 let test2 = todoFactory('test task 2', '2023-07-24');
-console.log(test);
-test.setName('test2');
 
-console.log(test.name)
-console.log(test.getName())
-console.log(test);
+let testProject = projectFactory('testing');
+
 
 
 document.body.appendChild(hello);

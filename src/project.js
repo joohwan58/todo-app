@@ -2,6 +2,14 @@ const projectFactory = (projectTitle) => {
     let title = projectTitle;
     let todos = [];
 
+    const setTitle = (newTitle) => {
+        title = newTitle;
+    }
+
+    const getTitle = () => {
+        return title;
+    }
+
     const addTodo = (toBeAdded) => {
         todos.push(toBeAdded);
     }
@@ -13,7 +21,7 @@ const projectFactory = (projectTitle) => {
         todos = newTodos;
     }
 
-    return { title, todos, addTodo, removeTodo };
+    return { title, getTitle, setTitle, todos, addTodo, removeTodo };
 }
 
 export { projectFactory }
