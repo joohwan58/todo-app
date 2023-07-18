@@ -2,7 +2,9 @@ import { projectFactory } from "./project";
 
 const app = (() => {
     let defaultProject = projectFactory('default');
-    //add daily and weekly
+    let dailyProject = projectFactory('daily');
+    let weeklyProject = projectFactory('weekly');
+
 
     let projects = [];
     const addProject = (toBeAdded) => {
@@ -15,9 +17,6 @@ const app = (() => {
         let newprojects = projects.splice(remove, 1);
         projects = newprojects;
     }
-
-
-
 
     return { defaultProject, projects, addProject, removeproject }
 })();

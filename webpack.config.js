@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -36,5 +37,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Change to title of project',
         }),
+        new FaviconsWebpackPlugin('./src/images/icon.png')
     ],
 }
