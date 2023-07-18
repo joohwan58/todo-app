@@ -5,6 +5,7 @@ import { printMe } from './print.js';
 import { todoFactory } from './todo.js';
 import { projectFactory } from './project.js'
 import { app } from './app.js';
+import { format, compareAsc } from 'date-fns'
 
 console.log('hello world');
 printMe();
@@ -20,8 +21,12 @@ fontTest.textContent = 'testing font';
 const Icon = document.createElement('img');
 Icon.src = Image;
 
-let test = todoFactory('test task', '2023-07-24');
+let testDate = new Date();
+
+let test = todoFactory('test task', testDate);
 let test2 = todoFactory('test task 2', '2023-07-25');
+
+console.log(test.getDate());
 
 let testProject = projectFactory('testing');
 testProject.addTodo(test);
@@ -40,11 +45,8 @@ app.defaultProject.addTodo(test2);
 
 app.updateDaily();
 
-let date = new Date();
-
-console.log(date.getDate());
-console.log(date.getMonth() + 1);
-console.log(date.getFullYear());
+let today = format(new Date(), 'yyyy-MM-dd');
+console.log(today);
 
 
 

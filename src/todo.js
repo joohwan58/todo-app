@@ -1,6 +1,6 @@
-const todoFactory = function (todoName, taskDate) { //date yyyy-mm-dd
+const todoFactory = function (todoName, todoDate) { //date yyyy-mm-dd
     let name = todoName;
-    let date = taskDate;
+    let date = todoDate;
 
     const setName = (newName) => {
         name = newName;
