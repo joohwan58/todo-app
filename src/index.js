@@ -21,9 +21,25 @@ const Icon = document.createElement('img');
 Icon.src = Image;
 
 let test = todoFactory('test task', '2023-07-24');
-let test2 = todoFactory('test task 2', '2023-07-24');
+let test2 = todoFactory('test task 2', '2023-07-25');
 
 let testProject = projectFactory('testing');
+testProject.addTodo(test);
+testProject.addTodo(test2);
+
+let testProject2 = projectFactory('testing2');
+testProject2.addTodo(test);
+testProject2.addTodo(test2);
+
+app.addProject(testProject);
+app.addProject(testProject2);
+
+app.defaultProject.addTodo(test);
+app.defaultProject.addTodo(test2);
+
+
+app.updateDaily();
+
 
 
 

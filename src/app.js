@@ -5,8 +5,19 @@ const app = (() => {
     let dailyProject = projectFactory('daily');
     let weeklyProject = projectFactory('weekly');
 
+    const updateDaily = () => {
+        let dailyTodos = [];
+        defaultProject.getTodos().forEach((element) => {
+            console.log(element.getDate());
+        })
+    }
 
     let projects = [];
+
+    const getProjects = () => {
+        return projects;
+    }
+
     const addProject = (toBeAdded) => {
         projects.push(toBeAdded);
     }
@@ -18,7 +29,7 @@ const app = (() => {
         projects = newprojects;
     }
 
-    return { defaultProject, projects, addProject, removeproject }
+    return { defaultProject, getProjects, addProject, removeproject, updateDaily }
 })();
 
 export { app }

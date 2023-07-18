@@ -21,7 +21,11 @@ const projectFactory = (projectTitle) => {
         todos = newTodos;
     }
 
-    return { title, getTitle, setTitle, todos, addTodo, removeTodo };
+    const getTodos = () => {
+        return todos;
+    }
+
+    return { getTitle, setTitle, getTodos, addTodo, removeTodo };
 }
 
 export { projectFactory }
