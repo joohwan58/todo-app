@@ -1,17 +1,36 @@
 @font-face {
-    font-family: 'testFont';
-    src: url('./fonts/test-font/DeftoneStylus-Regular.woff2') format('woff2'),
-        url('./fonts/test-font/DeftoneStylus-Regular.woff') format('woff');
+    font-family: 'handwriting-bold';
+    src: url('./fonts/handwriting-bold/SFCartoonistHand-Bold.woff2') format('woff2'),
+        url('./fonts/handwriting-bold/SFCartoonistHand-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'handwriting';
+    src: url('./fonts/handwriting/SFCartoonistHand.woff2') format('woff2'),
+        url('./fonts/handwriting/SFCartoonistHand.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-h1 {
-    color: green;
+* {
+    font-size: 25px;
+    font-family: 'handwriting';
 }
 
-h2 {
-    font-family: 'testFont';
-    font-size: 60px;
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.main-content {
+    height: 100%;
+    background-image: url(./images/background.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
