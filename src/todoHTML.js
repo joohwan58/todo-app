@@ -11,23 +11,29 @@ const convertTodoHTML = (todo) => {
     const todoElement = document.createElement('div');
     todoElement.classList.add('todo');
 
-    const checkbox = document.createElement('img');
-    checkbox.src = unchecked;
-    checkbox.classList.add('complete-checkbox');
-    checkbox.addEventListener('click', () => {
-        if (checkbox.src == unchecked) {
-            checkbox.src = checked;
-        } else {
-            checkbox.src = unchecked;
-        }
-    });
-
     const name = document.createElement('p');
     name.textContent = todoObject.getName();
     name.classList.add('todo-name');
 
     const date = document.createElement('p');
     date.textContent = 'Due ' + format(todoObject.getDate(), 'MM/dd/yyyy');
+
+    const checkbox = document.createElement('img');
+    checkbox.src = unchecked;
+    checkbox.classList.add('complete-checkbox');
+    checkbox.addEventListener('click', () => {
+        if (checkbox.src == unchecked) {
+            checkbox.src = checked;
+            name.textContent += " (Completed)"
+            name.style.textDecoration = 'line-through';
+            date.style.textDecoration = 'line-through';
+        } else {
+            checkbox.src = unchecked;
+            name.textContent = todoObject.getName();
+            name.style.textDecoration = 'none';
+            date.style.textDecoration = 'none';
+        }
+    });
 
     const editButton = document.createElement('img');
     editButton.src = editIcon;
