@@ -4,11 +4,18 @@ import { todoFactory } from './todo.js';
 import { projectFactory } from './project.js'
 import { app } from './app.js';
 import { checkDueDate } from './dateComparison.js';
+import { convertTodoHTML } from './todoHTML';
 
-let testDate = new Date(2023, 6, 27);
+const mainContent = document.createElement('div');
+mainContent.classList.add('main-content');
 
-console.log(checkDueDate.currentDate);
+let testTodo = todoFactory('test todo', new Date(2023, 6, 23));
 
-console.log(checkDueDate.overdue(testDate));
-console.log(checkDueDate.dueToday(testDate));
-console.log(checkDueDate.dueThisWeek(testDate));
+const testTodoHTMLObject = convertTodoHTML(testTodo);
+
+document.body.appendChild(mainContent);
+mainContent.appendChild(testTodoHTMLObject.todoElement);
+
+
+testTodoHTMLObject.todoObject.setName('test 2');
+testTodoHTMLObject.update();
