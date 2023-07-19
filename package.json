@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack",
-    "server": "npx webpack serve --open"
+    "server": "npx webpack serve --open",
+    "updateLivePage": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
