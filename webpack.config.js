@@ -35,7 +35,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Change to title of project',
+            title: 'To Do',
         }),
         new FaviconsWebpackPlugin('./src/images/icon.png')
     ],
