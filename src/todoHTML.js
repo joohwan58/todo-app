@@ -13,7 +13,7 @@ const convertTodoHTML = (todo) => {
 
     const checkbox = document.createElement('img');
     checkbox.src = unchecked;
-    checkbox.classList.add('completed');
+    checkbox.classList.add('complete-checkbox');
     checkbox.addEventListener('click', () => {
         if (checkbox.src == unchecked) {
             checkbox.src = checked;
