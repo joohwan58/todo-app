@@ -24,16 +24,31 @@ const cancelButton = document.createElement('button');
 cancelButton.classList.add('cancel');
 cancelButton.textContent = 'Cancel';
 
+cancelButton.addEventListener('click', () => {
+    name.value = "";
+    date.value = "";
+})
+
+const clearButton = document.createElement('button');
+clearButton.classList.add('clear');
+clearButton.textContent = 'Clear';
+
+clearButton.addEventListener('click', () => {
+    name.value = "";
+    date.value = "";
+})
+
 const submitButton = document.createElement('button');
 submitButton.classList.add('submit');
 submitButton.textContent = 'Submit';
 
 submitButton.addEventListener('click', () => {
-    let test = todoFactory(name.value, date.valueAsDate);
-    console.log(test.getName());
-    console.log(test.getDate());
+    if ((name.value != "") && (date.value != "")) {
+        let test = todoFactory(name.value, date.valueAsDate);
+        console.log(test.getName());
+        console.log(test.getDate());
+    }
 })
-
 
 container.appendChild(nameLabel);
 container.appendChild(name);
