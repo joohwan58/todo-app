@@ -1,4 +1,5 @@
 import './todoform-style.css';
+import { todoFactory } from './todo.js';
 
 const container = document.createElement('div');
 container.classList.add('todo-form');
@@ -27,7 +28,11 @@ const submitButton = document.createElement('button');
 submitButton.classList.add('submit');
 submitButton.textContent = 'Submit';
 
-
+submitButton.addEventListener('click', () => {
+    let test = todoFactory(name.value, date.valueAsDate);
+    console.log(test.getName());
+    console.log(test.getDate());
+})
 
 
 container.appendChild(nameLabel);
