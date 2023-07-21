@@ -1,0 +1,18 @@
+.todo-form {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: 5px solid black;
+
+    #name {
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        border: 2px dashed black;
+    }
+
+    #date {
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        border: 2px dashed black;
+    }
+}

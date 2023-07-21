@@ -5,6 +5,7 @@ import { projectFactory } from './project.js'
 import { app } from './app.js';
 import { checkDueDate } from './dateComparison.js';
 import { convertTodoHTML } from './todoHTML';
+import { container } from './todoFormHTML';
 
 const mainContent = document.createElement('div');
 mainContent.classList.add('main-content');
@@ -15,6 +16,7 @@ const testTodoHTMLObject = convertTodoHTML(testTodo);
 
 document.body.appendChild(mainContent);
 mainContent.appendChild(testTodoHTMLObject.todoElement);
+mainContent.appendChild(container);
 
 
 testTodoHTMLObject.todoObject.setName('test 2');
