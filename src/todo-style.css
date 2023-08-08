@@ -23,6 +23,7 @@ p {
     .delete {
         height: 43px;
         width: 43px;
+        transition: width 0.3s;
     }
 
     .edit:hover,

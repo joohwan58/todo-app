@@ -19,12 +19,20 @@
 * {
     font-size: 30px;
     font-family: 'handwriting';
+    margin: 0;
 }
 
 body,
 html {
     height: 100%;
-    margin: 0;
+}
+
+h1 {
+    font-family: 'handwriting-bold';
+    margin-left: 15%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 50px;
 }
 
 .main-content {
@@ -33,4 +41,6 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-left: 10px;
+    padding-right: 10px;
 }
