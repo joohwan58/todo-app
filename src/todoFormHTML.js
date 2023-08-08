@@ -55,6 +55,7 @@ container.appendChild(name);
 container.appendChild(dateLabel);
 container.appendChild(date);
 container.appendChild(cancelButton);
+container.appendChild(clearButton);
 container.appendChild(submitButton);
 
 export { container }
